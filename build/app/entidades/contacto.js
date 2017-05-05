@@ -13,7 +13,7 @@ var Contacto = (function () {
     }
     // Método estático (de la clase Contacto)
     Contacto.fromJSON = function (json) {
-        return new Contacto(json.id, json.nombre, json.apellidos, json.email, json.telefono, json.twitter, json.facebook, json.foto);
+        return new Contacto(json.id, json.nombre, json.apellidos, json.email, json.telefono, json.twitter, json.facebook, json.foto || '');
     };
     // Método de instancia (lo tienen todas las instancias de Contacto)
     Contacto.prototype.generarRutaFB = function () {

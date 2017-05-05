@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
@@ -19,7 +20,8 @@ import { EjemplosInyeccionComponent, Servicio1, Servicio2Provider } from './ejem
 @NgModule({
   imports: [      // Todos los módulos que necesita mi app
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],  
   declarations: [ // Componentes, directivas y pipes
     AppComponent,

@@ -42,7 +42,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.listaContactos = this._contactosService.getContactos();
+    this._contactosService.getContactos().subscribe((contactos) => {
+      this.listaContactos = contactos;
+    });
   }
 
   showDetails(contacto: Contacto) {
@@ -55,6 +57,8 @@ export class AppComponent implements OnInit {
   }
 
   guardarContacto(contacto: Contacto) {
-    console.log(contacto);
+    this._contactosService.addContacto(contacto).subscribe((contacto) => {
+      // this.listaContactos.push(contacto);
+    });
   }
 }

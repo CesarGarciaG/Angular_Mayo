@@ -11,7 +11,7 @@ export class Contacto {
             json.telefono,
             json.twitter,
             json.facebook,
-            json.foto
+            json.foto || ''
         );
     }
 

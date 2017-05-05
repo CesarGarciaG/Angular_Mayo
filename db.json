@@ -1,0 +1,44 @@
+{
+  "contactos": [
+    {
+      "id": "1",
+      "nombre": "Steve",
+      "apellidos": "Dogs",
+      "email": "steve.dogs@bone.com",
+      "telefono": "123212321",
+      "twitter": "stevedoge",
+      "facebook": "stevedogs",
+      "foto": ""
+    },
+    {
+      "id": "2",
+      "nombre": "Bill",
+      "apellidos": "Quacks",
+      "email": "bill.quacks@patosoft.com",
+      "telefono": "000000000",
+      "twitter": "billquacks",
+      "facebook": "billquacks",
+      "foto": ""
+    },
+    {
+      "id": 3,
+      "nombre": "Elon",
+      "apellidos": "Moose",
+      "email": "elon.moose@hoovesla.com",
+      "telefono": "101101010100101010000101010100100011000101",
+      "twitter": "mooselon",
+      "facebook": "elonmoose",
+      "foto": ""
+    },
+    {
+      "nombre": "asd",
+      "apellidos": "asd",
+      "email": "asd@asd.com",
+      "telefono": "131313131",
+      "twitter": "asd",
+      "facebook": "asd",
+      "foto": "",
+      "id": 4
+    },
+  ]
+}
