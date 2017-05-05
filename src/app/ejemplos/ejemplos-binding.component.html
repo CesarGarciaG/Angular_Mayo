@@ -1,0 +1,9 @@
+<h2>Tu número de la suerte es: {{ numeroSuerte }}</h2>
+<textarea [rows]="textAreaRows"></textarea>
+<div [class.caja]="pintaClase"></div>
+<div [ngClass]="clases"></div>
+<p [style.color]="getColor()">¡Buenos días!</p>
+<p [ngStyle]="getStyles()">¡Buenas tardes!</p>
+<button (click)="showMsg()">Mostrar mensaje</button>
+<input [(ngModel)]="mensaje" type="text"/>
+{{ mensaje }}

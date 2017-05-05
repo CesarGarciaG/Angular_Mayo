@@ -1,0 +1,25 @@
+<div *ngIf="contacto">
+    <!-- Con la directiva ngIf escribimos o no todo el elemento en el DOM,
+         en función de una expresión -->
+
+    <!-- Foto -->
+    <img [src]="contacto?.foto" alt="foto">
+
+    <!-- Nombre del contacto -->
+    <h5>{{ contacto?.nombre }} {{ contacto?.apellidos }}</h5>
+    <hr>
+
+    <!-- Redes sociales -->
+    <button (click)="notifyFB()">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+    </button>
+    <button (click)="notifyTW()">
+        <i class="fa fa-twitter-square" aria-hidden=""></i>
+    </button>
+
+    <!-- Correo del contacto -->
+    <span>{{ contacto?.email }}</span>
+
+    <!-- Teléfono del contacto-->
+    <span>{{ contacto?.telefono }}</span>
+</div>

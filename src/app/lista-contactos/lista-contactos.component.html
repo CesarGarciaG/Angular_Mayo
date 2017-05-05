@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let contacto of contactos" (click)="notificarContacto(contacto)">
+        <span>
+            <strong>{{ contacto.nombre }}</strong> {{ contacto.apellidos }}
+        </span>
+    </li>
+</ul>
