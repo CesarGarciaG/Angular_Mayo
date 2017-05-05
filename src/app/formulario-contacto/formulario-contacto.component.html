@@ -1,0 +1,26 @@
+<form #contactoForm="ngForm" (ngSubmit)="guardarContacto(contactoForm)" novalidate>
+    <!-- Nombre -->
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre"
+               name="nombre"
+               ngModel
+               placeholder="Ej. Tom"
+               required>
+    </div>
+
+    <!-- Apellidos -->
+    <div>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos"
+               name="apellidos"
+               ngModel
+               placeholder="Ej. Cena"
+               required>
+    </div>
+
+    <!-- Botón de guardado -->
+    <button type="submit"
+            class="button-primary"
+            [disabled]="contactoForm.invalid">Guardar</button>
+</form>

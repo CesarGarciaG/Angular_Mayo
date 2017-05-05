@@ -11,6 +11,7 @@ var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var lista_contactos_component_1 = require("./lista-contactos/lista-contactos.component");
 var detalles_contacto_component_1 = require("./detalles-contacto/detalles-contacto.component");
+var formulario_contacto_component_1 = require("./formulario-contacto/formulario-contacto.component");
 var contactos_service_1 = require("./servicios/contactos.service");
 // Ejemplos
 var caja_component_1 = require("./ejemplos/caja.component");
@@ -32,6 +33,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             lista_contactos_component_1.ListaContactosComponent,
             detalles_contacto_component_1.DetallesContactoComponent,
+            formulario_contacto_component_1.FormularioContactoComponent,
             caja_component_1.CajaComponent,
             ejemplos_binding_component_1.EjemplosBindingComponent,
             ejemplos_componentes_component_1.EjemplosComponentesComponent,
