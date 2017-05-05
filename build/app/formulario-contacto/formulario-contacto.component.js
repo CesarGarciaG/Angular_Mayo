@@ -18,7 +18,7 @@ FormularioContactoComponent = __decorate([
     core_1.Component({
         selector: 'formulario-contacto',
         templateUrl: '/app/formulario-contacto/formulario-contacto.component.html',
-        styles: ["\n        button:disabled {\n            background-color: lightgray;\n            border: 1px solid gray;\n        }\n    "]
+        styleUrls: ['app/formulario-contacto/formulario-contacto.component.css']
     })
 ], FormularioContactoComponent);
 exports.FormularioContactoComponent = FormularioContactoComponent;

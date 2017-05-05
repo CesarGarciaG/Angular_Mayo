@@ -4,12 +4,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
     selector: 'formulario-contacto',
     templateUrl: '/app/formulario-contacto/formulario-contacto.component.html',
-    styles: [`
-        button:disabled {
-            background-color: lightgray;
-            border: 1px solid gray;
-        }
-    `]
+    styleUrls: ['app/formulario-contacto/formulario-contacto.component.css']
 })
 
 export class FormularioContactoComponent {
