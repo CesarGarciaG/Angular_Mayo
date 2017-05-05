@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Contacto } from '../entidades/contacto';
 
 @Component({
     selector: 'formulario-contacto',
@@ -9,8 +10,12 @@ import { FormGroup } from '@angular/forms';
 
 export class FormularioContactoComponent {
 
-    guardarContacto(contactoForm: FormGroup) {
-        console.log(contactoForm);
+    @Output() formAceptado: EventEmitter<Contacto> = new EventEmitter();
+
+    notificarContacto(contactoForm: FormGroup) {
+        // console.log(contactoForm);
+        const contacto: Contacto = Contacto.fromJSON(contactoForm.value);
+        this.formAceptado.emit(contacto);
     }
 
 }

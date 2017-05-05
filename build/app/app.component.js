@@ -50,6 +50,9 @@ var AppComponent = (function () {
         console.log('Navegando a', ruta);
         window.open(ruta, '_blank');
     };
+    AppComponent.prototype.guardarContacto = function (contacto) {
+        console.log(contacto);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([

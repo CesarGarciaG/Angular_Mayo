@@ -53,4 +53,8 @@ export class AppComponent implements OnInit {
     console.log('Navegando a', ruta);
     window.open(ruta, '_blank');
   }
+
+  guardarContacto(contacto: Contacto) {
+    console.log(contacto);
+  }
 }
