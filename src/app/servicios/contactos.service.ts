@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { Contacto } from '../entidades/contacto';
+import { Direcciones } from '../config/direcciones';
 
 @Injectable()
 export class ContactosService {
@@ -42,11 +43,15 @@ export class ContactosService {
     //     })
     // ];
 
-    constructor(private _http: Http) {}
+    constructor(
+        private _http: Http,
+        @Inject(Direcciones) private _direcciones: any
+    ) {}
 
+    // Recuperamos la lista de contactos del servidor (GET)
     getContactos(): Observable<Contacto[]> {
         return this._http
-            .get('http://localhost:3004/contactos')
+            .get(`${this._direcciones.servidor}/contactos`)
             .map((res) => {
                 // Obtengo la lista de objetos que está en el body
                 const lista: any[] = res.json();
@@ -57,12 +62,43 @@ export class ContactosService {
             });
     }
 
+    // Creamos un contacto en el servidor (POST)
     addContacto(contacto: Contacto): Observable<Contacto> {
         return this._http
-            .post('http://localhost:3004/contactos', contacto)
+            .post(`${this._direcciones.servidor}/contactos`, contacto)
             .map((res) => {
                 return Contacto.fromJSON(res.json());
             });
+    }
+
+    // Eliminamos un contacto del servidor (DELETE)
+    deleteContacto(contacto: Contacto): Observable<Contacto> {
+        return this._http
+            .delete(`${this._direcciones.servidor}/contactos/${contacto.id}`)
+            .map((res) => {
+                return Contacto.fromJSON(res.json());
+            });
+    }
+
+    // Editamos un contacto en el servidor (PUT)
+    editContacto(contacto: Contacto): Observable<Contacto> {
+        return this._http
+            .put(`${this._direcciones.servidor}/contactos/${contacto.id}`, contacto)
+            .map((res) => {
+                return Contacto.fromJSON(res.json());
+            });
+    }
+
+    generarRutaFoto(): Observable<string> {
+        // http://faker.hook.io/?property=image.avatar
+        return this._http
+            .get(this._direcciones.faker)
+            .map((res) => {
+                let rutaFoto = res.text();
+                rutaFoto = rutaFoto.replace(new RegExp('\"', 'g'), '');
+                // console.log(rutaFoto);
+                return rutaFoto;
+            })
     }
 
 }

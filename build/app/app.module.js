@@ -18,6 +18,7 @@ var mis_contactos_component_1 = require("./mis-contactos/mis-contactos.component
 var nuevo_contacto_component_1 = require("./nuevo-contacto/nuevo-contacto.component");
 var contactos_service_1 = require("./servicios/contactos.service");
 var contactos_resolve_service_1 = require("./servicios/contactos-resolve.service");
+var direcciones_1 = require("./config/direcciones");
 // Ejemplos
 var caja_component_1 = require("./ejemplos/caja.component");
 var ejemplos_binding_component_1 = require("./ejemplos/ejemplos-binding.component");
@@ -51,6 +52,7 @@ AppModule = __decorate([
         providers: [
             contactos_service_1.ContactosService,
             contactos_resolve_service_1.ContactosResolve,
+            direcciones_1.ProvDirecciones,
             ejemplos_inyeccion_component_1.Servicio1,
             ejemplos_inyeccion_component_1.Servicio2Provider // No @Injectable, se incluye el provider en su lugar
         ],

@@ -12,6 +12,7 @@ import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
 import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component';
 import { ContactosService } from './servicios/contactos.service';
 import { ContactosResolve } from './servicios/contactos-resolve.service';
+import { ProvDirecciones } from './config/direcciones';
 
 // Ejemplos
 import { CajaComponent } from './ejemplos/caja.component';
@@ -43,6 +44,7 @@ import { EjemplosInyeccionComponent, Servicio1, Servicio2Provider } from './ejem
   providers: [    // Servicios
     ContactosService,
     ContactosResolve,
+    ProvDirecciones,
     Servicio1, // @Injectable
     Servicio2Provider // No @Injectable, se incluye el provider en su lugar
   ],  

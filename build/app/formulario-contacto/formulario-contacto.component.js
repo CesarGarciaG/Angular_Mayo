@@ -10,13 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var contacto_1 = require("../entidades/contacto");
+var contactos_service_1 = require("../servicios/contactos.service");
 var FormularioContactoComponent = (function () {
-    function FormularioContactoComponent() {
+    function FormularioContactoComponent(_contactosService) {
+        this._contactosService = _contactosService;
         this.formAceptado = new core_1.EventEmitter();
+        this.rutaFoto = '';
     }
+    FormularioContactoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._contactosService.generarRutaFoto().subscribe(function (ruta) {
+            _this.rutaFoto = ruta;
+        });
+    };
     FormularioContactoComponent.prototype.notificarContacto = function (contactoForm) {
         // console.log(contactoForm);
         var contacto = contacto_1.Contacto.fromJSON(contactoForm.value);
+        contacto.foto = this.rutaFoto;
         this.formAceptado.emit(contacto);
     };
     return FormularioContactoComponent;
@@ -30,7 +40,8 @@ FormularioContactoComponent = __decorate([
         selector: 'formulario-contacto',
         templateUrl: './formulario-contacto.component.html',
         styleUrls: ['./formulario-contacto.component.css']
-    })
+    }),
+    __metadata("design:paramtypes", [contactos_service_1.ContactosService])
 ], FormularioContactoComponent);
 exports.FormularioContactoComponent = FormularioContactoComponent;
 //# sourceMappingURL=formulario-contacto.component.js.map

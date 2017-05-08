@@ -9,16 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var contactos_service_1 = require("../servicios/contactos.service");
 var NuevoContactoComponent = (function () {
-    function NuevoContactoComponent(_contactosService) {
+    function NuevoContactoComponent(_contactosService, _router) {
         this._contactosService = _contactosService;
+        this._router = _router;
     }
     NuevoContactoComponent.prototype.guardarContacto = function (contacto) {
+        var _this = this;
         console.log('Entro por aquí');
         this._contactosService.addContacto(contacto).subscribe(function (contacto) {
-            // this.listaContactos.push(contacto);
-            alert('Creado');
+            // Navegamos a "Mis Contactos"
+            _this._router.navigate(['mis-contactos']);
         });
     };
     return NuevoContactoComponent;
@@ -27,7 +30,8 @@ NuevoContactoComponent = __decorate([
     core_1.Component({
         template: "\n        <formulario-contacto (formAceptado)=\"guardarContacto($event)\"></formulario-contacto>\n    "
     }),
-    __metadata("design:paramtypes", [contactos_service_1.ContactosService])
+    __metadata("design:paramtypes", [contactos_service_1.ContactosService,
+        router_1.Router])
 ], NuevoContactoComponent);
 exports.NuevoContactoComponent = NuevoContactoComponent;
 //# sourceMappingURL=nuevo-contacto.component.js.map
