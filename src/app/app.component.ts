@@ -9,7 +9,7 @@ import { ContactosService } from './servicios/contactos.service';
 
 @Component({
   selector: 'my-app',
-  templateUrl: '/app/app.component.html'
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent implements OnInit {
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
 
   guardarContacto(contacto: Contacto) {
     this._contactosService.addContacto(contacto).subscribe((contacto) => {
-      // this.listaContactos.push(contacto);
+        this.listaContactos.push(contacto);
     });
   }
 }

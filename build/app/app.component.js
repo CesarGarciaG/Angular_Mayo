@@ -54,8 +54,9 @@ var AppComponent = (function () {
         window.open(ruta, '_blank');
     };
     AppComponent.prototype.guardarContacto = function (contacto) {
+        var _this = this;
         this._contactosService.addContacto(contacto).subscribe(function (contacto) {
-            // this.listaContactos.push(contacto);
+            _this.listaContactos.push(contacto);
         });
     };
     return AppComponent;
@@ -63,7 +64,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        templateUrl: '/app/app.component.html'
+        templateUrl: './app.component.html'
     }),
     __metadata("design:paramtypes", [contactos_service_1.ContactosService])
 ], AppComponent);

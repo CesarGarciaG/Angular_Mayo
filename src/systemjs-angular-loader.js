@@ -21,6 +21,8 @@ module.exports.translate = function(load){
     basePath = basePath.replace(baseHref, '');
   }
 
+  basePath = basePath.replace(/^build\//, '');
+
   load.source = load.source
     .replace(templateUrlRegex, function(match, quote, url){
       var resolvedUrl = url;
