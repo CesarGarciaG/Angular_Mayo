@@ -9,15 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var contactos_service_1 = require("../servicios/contactos.service");
 var MisContactosComponent = (function () {
-    function MisContactosComponent(_contactosService) {
+    function MisContactosComponent(_contactosService, _activatedRoute) {
         this._contactosService = _contactosService;
+        this._activatedRoute = _activatedRoute;
     }
     MisContactosComponent.prototype.ngOnInit = function () {
+        // this._contactosService.getContactos().subscribe((contactos) => {
+        //     this.listaContactos = contactos;
+        // });
         var _this = this;
-        this._contactosService.getContactos().subscribe(function (contactos) {
-            _this.listaContactos = contactos;
+        // data representa al objeto del resolve (ver app-routing)
+        this._activatedRoute.data.forEach(function (data) {
+            _this.listaContactos = data.contactos;
         });
     };
     MisContactosComponent.prototype.showDetails = function (contacto) {
@@ -33,7 +39,7 @@ MisContactosComponent = __decorate([
     core_1.Component({
         templateUrl: './mis-contactos.component.html'
     }),
-    __metadata("design:paramtypes", [contactos_service_1.ContactosService])
+    __metadata("design:paramtypes", [contactos_service_1.ContactosService, router_1.ActivatedRoute])
 ], MisContactosComponent);
 exports.MisContactosComponent = MisContactosComponent;
 //# sourceMappingURL=mis-contactos.component.js.map
