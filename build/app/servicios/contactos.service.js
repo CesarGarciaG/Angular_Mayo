@@ -55,10 +55,9 @@ var ContactosService = (function () {
             // Obtengo la lista de objetos que está en el body
             var lista = res.json();
             // Creo una lista de contactos y la devuelvo
-            lista.map(function (elem) {
+            return lista.map(function (elem) {
                 return contacto_1.Contacto.fromJSON(elem);
             });
-            return lista;
         });
     };
     ContactosService.prototype.addContacto = function (contacto) {

@@ -1,88 +1,110 @@
 <form #contactoForm="ngForm" (ngSubmit)="notificarContacto(contactoForm)" novalidate>
     <!-- Nombre -->
-    <div>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre"
-               name="nombre"
-               ngModel
-               #nombreRef="ngModel"
-               placeholder="Ej. Tom"
-               required
-               minlength="2">
-        <div class="mensaje-error"
-             *ngIf="nombreRef.touched && nombreRef.errors?.required">
-            El campo nombre es requerido
-        </div>
-        <div class="mensaje-error"
-             *ngIf="nombreRef.touched && nombreRef.errors?.minlength">
-            El campo nombre debe tener al menos 
-            {{ nombreRef.errors.minlength.requiredLength }} caracteres
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre"
+                class="u-full-width"
+                name="nombre"
+                ngModel
+                #nombreRef="ngModel"
+                placeholder="Ej. Tom"
+                required
+                minlength="2">
+            <div class="mensaje-error"
+                *ngIf="nombreRef.touched && nombreRef.errors?.required">
+                El campo nombre es requerido
+            </div>
+            <div class="mensaje-error"
+                *ngIf="nombreRef.touched && nombreRef.errors?.minlength">
+                El campo nombre debe tener al menos 
+                {{ nombreRef.errors.minlength.requiredLength }} caracteres
+            </div>
         </div>
     </div>
 
     <!-- Apellidos -->
-    <div>
-        <label for="apellidos">Apellidos</label>
-        <input type="text" id="apellidos"
-               name="apellidos"
-               ngModel
-               #apellidosRef="ngModel"
-               placeholder="Ej. Cena"
-               required
-               minlength="2">
-        <div class="mensaje-error"
-             *ngIf="apellidosRef.touched && apellidosRef.errors?.required">
-            El campo apellidos es requerido
-        </div>
-        <div class="mensaje-error"
-             *ngIf="apellidosRef.touched && apellidosRef.errors?.minlength">
-            El campo apellidos debe tener al menos 
-            {{ apellidosRef.errors.minlength.requiredLength }} caracteres
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos"
+                class="u-full-width"
+                name="apellidos"
+                ngModel
+                #apellidosRef="ngModel"
+                placeholder="Ej. Cena"
+                required
+                minlength="2">
+            <div class="mensaje-error"
+                *ngIf="apellidosRef.touched && apellidosRef.errors?.required">
+                El campo apellidos es requerido
+            </div>
+            <div class="mensaje-error"
+                *ngIf="apellidosRef.touched && apellidosRef.errors?.minlength">
+                El campo apellidos debe tener al menos 
+                {{ apellidosRef.errors.minlength.requiredLength }} caracteres
+            </div>
         </div>
     </div>
 
     <!-- Email -->
-    <div>
-        <label for="email">Email</label>
-        <input type="text" id="email"
-               name="email"
-               ngModel
-               #emailRef="ngModel"
-               placeholder="Ej. tom.cena@mail.com">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="email">Email</label>
+            <input type="text" id="email"
+                class="u-full-width"
+                name="email"
+                ngModel
+                #emailRef="ngModel"
+                placeholder="Ej. tom.cena@mail.com">
+        </div>
     </div>
 
     <!-- Teléfono -->
-    <div>
-        <label for="telefono">Teléfono</label>
-        <input type="text" id="telefono"
-               name="telefono"
-               ngModel
-               #telefonoRef="ngModel"
-               placeholder="Ej. 666111999">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono"
+                class="u-full-width"
+                name="telefono"
+                ngModel
+                #telefonoRef="ngModel"
+                placeholder="Ej. 666111999">
+        </div>
     </div>
 
     <!-- Facebook -->
-    <div>
-        <label for="facebook">Facebook</label>
-        <input type="text" id="facebook"
-               name="facebook"
-               ngModel
-               #facebookRef="ngModel"
-               placeholder="Ej. tomcena">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="facebook">Facebook</label>
+            <input type="text" id="facebook"
+                class="u-full-width"
+                name="facebook"
+                ngModel
+                #facebookRef="ngModel"
+                placeholder="Ej. tomcena">
+        </div>
     </div>
 
     <!-- Twitter -->
-    <div>
-        <label for="twitter">Twitter</label>
-        <input type="text" id="twitter"
-               name="twitter"
-               ngModel
-               #twitterRef="ngModel"
-               placeholder="Ej. tomcena">
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <label for="twitter">Twitter</label>
+            <input type="text" id="twitter"
+                class="u-full-width"
+                name="twitter"
+                ngModel
+                #twitterRef="ngModel"
+                placeholder="Ej. tomcena">
+        </div>
     </div>
 
     <!-- Botón de guardado -->
-    <button type="submit"
-            class="button-primary"
-            [disabled]="contactoForm.invalid">Guardar</button>
+    <div class="row">
+        <div class="offset-by-three six columns">
+            <button type="submit"
+                    class="button-primary u-full-width"
+                    [disabled]="contactoForm.invalid">Guardar</button>
+        </div>
+    </div>
 </form>

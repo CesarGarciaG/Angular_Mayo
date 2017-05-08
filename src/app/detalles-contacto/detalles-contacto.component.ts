@@ -19,6 +19,7 @@ export class DetallesContactoComponent {
 
     notifyTW() {
         this.verTW.emit(this.contacto.generarRutaTW());
+        // this.verTW.emit('rutaTwitter');
     }
 
 }

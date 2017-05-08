@@ -9,15 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var contactos_service_1 = require("./servicios/contactos.service");
 // interface Coche {
 //   ruedas: number;
 //   pegatinas?: string[]; // ? = Propiedad opcional
 // }
 var AppComponent = (function () {
-    function AppComponent(_contactosService) {
+    function AppComponent() {
         var _this = this;
-        this._contactosService = _contactosService;
         // Mi cronómetro :)
         this.name = 'olleH';
         this.cs = 0;
@@ -40,33 +38,15 @@ var AppComponent = (function () {
             }
         }, 100);
     }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._contactosService.getContactos().subscribe(function (contactos) {
-            _this.listaContactos = contactos;
-        });
-    };
-    AppComponent.prototype.showDetails = function (contacto) {
-        this.contactoSelec = contacto;
-    };
-    AppComponent.prototype.navegarRuta = function (ruta) {
-        console.log('Navegando a', ruta);
-        window.open(ruta, '_blank');
-    };
-    AppComponent.prototype.guardarContacto = function (contacto) {
-        var _this = this;
-        this._contactosService.addContacto(contacto).subscribe(function (contacto) {
-            _this.listaContactos.push(contacto);
-        });
-    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        templateUrl: './app.component.html'
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.css']
     }),
-    __metadata("design:paramtypes", [contactos_service_1.ContactosService])
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

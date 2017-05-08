@@ -9,10 +9,11 @@ import { ContactosService } from './servicios/contactos.service';
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
   // Mi cronómetro :)
   name: string = 'olleH';
   cs: number = 0;
@@ -21,10 +22,9 @@ export class AppComponent implements OnInit {
   min: number = 0;
   numeroSuerte: number = 77;
 
-  listaContactos: Contacto[];
-  contactoSelec: Contacto;
+ 
 
-  constructor(private _contactosService: ContactosService) {
+  constructor() {
     // Inicializamos el cronómetro (opcional, pero queda chulo ^^)
     setInterval(() => {
       this.cs++;
@@ -39,26 +39,5 @@ export class AppComponent implements OnInit {
         }
       }
     }, 100);
-  }
-
-  ngOnInit() {
-    this._contactosService.getContactos().subscribe((contactos) => {
-      this.listaContactos = contactos;
-    });
-  }
-
-  showDetails(contacto: Contacto) {
-    this.contactoSelec = contacto;
-  }
-
-  navegarRuta(ruta: string) {
-    console.log('Navegando a', ruta);
-    window.open(ruta, '_blank');
-  }
-
-  guardarContacto(contacto: Contacto) {
-    this._contactosService.addContacto(contacto).subscribe((contacto) => {
-        this.listaContactos.push(contacto);
-    });
   }
 }

@@ -9,10 +9,13 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
+var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var lista_contactos_component_1 = require("./lista-contactos/lista-contactos.component");
 var detalles_contacto_component_1 = require("./detalles-contacto/detalles-contacto.component");
 var formulario_contacto_component_1 = require("./formulario-contacto/formulario-contacto.component");
+var mis_contactos_component_1 = require("./mis-contactos/mis-contactos.component");
+var nuevo_contacto_component_1 = require("./nuevo-contacto/nuevo-contacto.component");
 var contactos_service_1 = require("./servicios/contactos.service");
 // Ejemplos
 var caja_component_1 = require("./ejemplos/caja.component");
@@ -29,13 +32,16 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
-            http_1.HttpModule
+            http_1.HttpModule,
+            app_routing_module_1.AppRoutingModule
         ],
         declarations: [
             app_component_1.AppComponent,
             lista_contactos_component_1.ListaContactosComponent,
             detalles_contacto_component_1.DetallesContactoComponent,
             formulario_contacto_component_1.FormularioContactoComponent,
+            mis_contactos_component_1.MisContactosComponent,
+            nuevo_contacto_component_1.NuevoContactoComponent,
             caja_component_1.CajaComponent,
             ejemplos_binding_component_1.EjemplosBindingComponent,
             ejemplos_componentes_component_1.EjemplosComponentesComponent,

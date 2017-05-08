@@ -20,6 +20,7 @@ var DetallesContactoComponent = (function () {
     };
     DetallesContactoComponent.prototype.notifyTW = function () {
         this.verTW.emit(this.contacto.generarRutaTW());
+        // this.verTW.emit('rutaTwitter');
     };
     return DetallesContactoComponent;
 }());

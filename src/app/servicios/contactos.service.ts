@@ -51,10 +51,9 @@ export class ContactosService {
                 // Obtengo la lista de objetos que está en el body
                 const lista: any[] = res.json();
                 // Creo una lista de contactos y la devuelvo
-                lista.map((elem) => {
+                return lista.map((elem) => {
                     return Contacto.fromJSON(elem);
                 });
-                return lista;
             });
     }
 
