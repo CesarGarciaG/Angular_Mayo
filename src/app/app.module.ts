@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { JsonpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto
 import { FormularioContactoComponent } from './formulario-contacto/formulario-contacto.component';
 import { MisContactosComponent } from './mis-contactos/mis-contactos.component';
 import { NuevoContactoComponent } from './nuevo-contacto/nuevo-contacto.component';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 import { ContactosService } from './servicios/contactos.service';
 import { ContactosResolve } from './servicios/contactos-resolve.service';
 import { ProvDirecciones } from './config/direcciones';
@@ -19,6 +21,9 @@ import { CajaComponent } from './ejemplos/caja.component';
 import { EjemplosBindingComponent } from './ejemplos/ejemplos-binding.component';
 import { EjemplosComponentesComponent } from './ejemplos/ejemplos-componentes.component';
 import { EjemplosInyeccionComponent, Servicio1, Servicio2Provider } from './ejemplos/ejemplos-inyeccion.component';
+import { EjemplosObservablesComponent, EjemplosObservablesWikiComponent } from './ejemplos/ejemplos-observables.component';
+import { EjemplosPipeComponent } from './ejemplos/ejemplos-pipe.component';
+
 
 
 
@@ -26,7 +31,7 @@ import { EjemplosInyeccionComponent, Servicio1, Servicio2Provider } from './ejem
   imports: [      // Todos los módulos que necesita mi app
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpModule, JsonpModule,
     AppRoutingModule
   ],  
   declarations: [ // Componentes, directivas y pipes
@@ -36,10 +41,14 @@ import { EjemplosInyeccionComponent, Servicio1, Servicio2Provider } from './ejem
     FormularioContactoComponent,
     MisContactosComponent,
     NuevoContactoComponent,
+    OrdenarPipe,
     CajaComponent,
     EjemplosBindingComponent,
     EjemplosComponentesComponent,
-    EjemplosInyeccionComponent
+    EjemplosInyeccionComponent,
+    EjemplosObservablesComponent,
+    EjemplosObservablesWikiComponent,
+    EjemplosPipeComponent
   ],   
   providers: [    // Servicios
     ContactosService,

@@ -59,6 +59,26 @@
       "facebook": "pipewoofman",
       "foto": "https://s3.amazonaws.com/uifaces/faces/twitter/craigrcoles/128.jpg\n",
       "id": "rkFXO0pkb"
+    },
+    {
+      "nombre": "Roy",
+      "apellidos": "\"The Hammer\"",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "foto": "https://s3.amazonaws.com/uifaces/faces/twitter/smenov/128.jpg\n",
+      "id": "H1t73kJxb"
+    },
+    {
+      "nombre": "Tony",
+      "apellidos": "Cuteface",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "foto": "https://s3.amazonaws.com/uifaces/faces/twitter/nfedoroff/128.jpg\n",
+      "id": "By8Hp-yx-"
     }
   ]
 }

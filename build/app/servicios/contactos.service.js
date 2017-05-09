@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
+// import 'rxjs/add/operator/share';
 var contacto_1 = require("../entidades/contacto");
 var direcciones_1 = require("../config/direcciones");
 var ContactosService = (function () {
