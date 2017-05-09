@@ -23,6 +23,8 @@ import { EjemplosComponentesComponent } from './ejemplos/ejemplos-componentes.co
 import { EjemplosInyeccionComponent, Servicio1, Servicio2Provider } from './ejemplos/ejemplos-inyeccion.component';
 import { EjemplosObservablesComponent, EjemplosObservablesWikiComponent } from './ejemplos/ejemplos-observables.component';
 import { EjemplosPipeComponent } from './ejemplos/ejemplos-pipe.component';
+import { EjemplosDirectivasComponent } from './ejemplos/ejemplos-directivas.component';
+import { EjemplosDirectivasAtributoDirective } from './ejemplos/ejemplos-directivas.directive';
 
 
 
@@ -48,7 +50,9 @@ import { EjemplosPipeComponent } from './ejemplos/ejemplos-pipe.component';
     EjemplosInyeccionComponent,
     EjemplosObservablesComponent,
     EjemplosObservablesWikiComponent,
-    EjemplosPipeComponent
+    EjemplosPipeComponent,
+    EjemplosDirectivasComponent,
+    EjemplosDirectivasAtributoDirective
   ],   
   providers: [    // Servicios
     ContactosService,

@@ -28,6 +28,8 @@ var ejemplos_componentes_component_1 = require("./ejemplos/ejemplos-componentes.
 var ejemplos_inyeccion_component_1 = require("./ejemplos/ejemplos-inyeccion.component");
 var ejemplos_observables_component_1 = require("./ejemplos/ejemplos-observables.component");
 var ejemplos_pipe_component_1 = require("./ejemplos/ejemplos-pipe.component");
+var ejemplos_directivas_component_1 = require("./ejemplos/ejemplos-directivas.component");
+var ejemplos_directivas_directive_1 = require("./ejemplos/ejemplos-directivas.directive");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -55,7 +57,9 @@ AppModule = __decorate([
             ejemplos_inyeccion_component_1.EjemplosInyeccionComponent,
             ejemplos_observables_component_1.EjemplosObservablesComponent,
             ejemplos_observables_component_1.EjemplosObservablesWikiComponent,
-            ejemplos_pipe_component_1.EjemplosPipeComponent
+            ejemplos_pipe_component_1.EjemplosPipeComponent,
+            ejemplos_directivas_component_1.EjemplosDirectivasComponent,
+            ejemplos_directivas_directive_1.EjemplosDirectivasAtributoDirective
         ],
         providers: [
             contactos_service_1.ContactosService,
