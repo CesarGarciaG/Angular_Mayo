@@ -77,11 +77,7 @@ var ContactosService = (function () {
     };
     // Eliminamos un contacto del servidor (DELETE)
     ContactosService.prototype.deleteContacto = function (contacto) {
-        return this._http
-            .delete(this._direcciones.servidor + "/contactos/" + contacto.id)
-            .map(function (res) {
-            return contacto_1.Contacto.fromJSON(res.json());
-        });
+        return this._http.delete(this._direcciones.servidor + "/contactos/" + contacto.id);
     };
     // Editamos un contacto en el servidor (PUT)
     ContactosService.prototype.editContacto = function (contacto) {

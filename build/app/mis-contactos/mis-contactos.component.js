@@ -33,6 +33,24 @@ var MisContactosComponent = (function () {
         console.log('Navegando a', ruta);
         window.open(ruta, '_blank');
     };
+    MisContactosComponent.prototype.eliminarContacto = function (contacto) {
+        var _this = this;
+        if (confirm("\u00BFSeguro que quieres eliminar a " + contacto.nombre + " " + contacto.apellidos + "?")) {
+            this._contactosService.deleteContacto(contacto).subscribe(function () {
+                console.log('Contacto eliminado');
+                // Busco en contacto en la lista para eliminarlo
+                var index = _this.listaContactos.findIndex(function (c) {
+                    return c.id === contacto.id;
+                });
+                if (index !== -1) {
+                    // Lo eliminamos de la lista
+                    _this.listaContactos.splice(index, 1);
+                    // Lo quitamos de seleccionado
+                    _this.contactoSelec = null;
+                }
+            });
+        }
+    };
     return MisContactosComponent;
 }());
 MisContactosComponent = __decorate([

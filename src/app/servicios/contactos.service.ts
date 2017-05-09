@@ -73,12 +73,8 @@ export class ContactosService {
     }
 
     // Eliminamos un contacto del servidor (DELETE)
-    deleteContacto(contacto: Contacto): Observable<Contacto> {
-        return this._http
-            .delete(`${this._direcciones.servidor}/contactos/${contacto.id}`)
-            .map((res) => {
-                return Contacto.fromJSON(res.json());
-            });
+    deleteContacto(contacto: Contacto): Observable<any> {
+        return this._http.delete(`${this._direcciones.servidor}/contactos/${contacto.id}`);
     }
 
     // Editamos un contacto en el servidor (PUT)

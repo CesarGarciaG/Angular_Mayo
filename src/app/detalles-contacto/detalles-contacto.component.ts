@@ -12,7 +12,7 @@ export class DetallesContactoComponent {
     @Input() contacto: Contacto;
     @Output() verFB: EventEmitter<string> = new EventEmitter();
     @Output() verTW: EventEmitter<string> = new EventEmitter();
-
+    @Output() eliminar: EventEmitter<Contacto> = new EventEmitter();
     notifyFB() {
         this.verFB.emit(this.contacto.generarRutaFB());
     }
@@ -20,6 +20,10 @@ export class DetallesContactoComponent {
     notifyTW() {
         this.verTW.emit(this.contacto.generarRutaTW());
         // this.verTW.emit('rutaTwitter');
+    }
+
+    notifyDel() {
+        this.eliminar.emit(this.contacto);
     }
 
 }

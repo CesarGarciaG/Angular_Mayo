@@ -31,26 +31,6 @@
       "foto": ""
     },
     {
-      "nombre": "aaaa",
-      "apellidos": "aaaa",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "foto": "",
-      "id": "SkhVk0p1Z"
-    },
-    {
-      "nombre": "Beardy",
-      "apellidos": "McFlush",
-      "email": "",
-      "telefono": "",
-      "twitter": "",
-      "facebook": "",
-      "foto": "",
-      "id": "S14pU0aJb"
-    },
-    {
       "nombre": "Pipe",
       "apellidos": "Woofman",
       "email": "pipe.woofman@mail.com",
@@ -79,6 +59,26 @@
       "facebook": "",
       "foto": "https://s3.amazonaws.com/uifaces/faces/twitter/nfedoroff/128.jpg\n",
       "id": "By8Hp-yx-"
+    },
+    {
+      "nombre": "Red",
+      "apellidos": "Ranger",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "foto": "https://s3.amazonaws.com/uifaces/faces/twitter/jakemoore/128.jpg\n",
+      "id": "B1_k2mJgZ"
+    },
+    {
+      "nombre": "John",
+      "apellidos": "Star",
+      "email": "",
+      "telefono": "",
+      "twitter": "",
+      "facebook": "",
+      "foto": "https://s3.amazonaws.com/uifaces/faces/twitter/brandonmorreale/128.jpg\n",
+      "id": "BJvg0Xkg-"
     }
   ]
 }
