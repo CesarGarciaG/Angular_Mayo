@@ -59,7 +59,7 @@ export class ContactosService {
                 return lista.map((elem) => {
                     return Contacto.fromJSON(elem);
                 });
-            });
+            });//}).share(); (opcional)
     }
 
     // Creamos un contacto en el servidor (POST)

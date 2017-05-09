@@ -64,7 +64,7 @@ var ContactosService = (function () {
             return lista.map(function (elem) {
                 return contacto_1.Contacto.fromJSON(elem);
             });
-        });
+        }); //}).share(); (opcional)
     };
     // Creamos un contacto en el servidor (POST)
     ContactosService.prototype.addContacto = function (contacto) {
